@@ -31,9 +31,7 @@ interface Emits {
   close: [];
 }
 
-defineProps<Props>();
-defineEmits<Emits>();
-
+const props = defineProps<Props>();
 const emit = defineEmits<Emits>();
 const copied = ref(false);
 
@@ -52,8 +50,6 @@ const copyCode = async () => {
     console.error('Failed to copy:', err);
   }
 };
-
-const props = defineProps<Props>();
 </script>
 
 <style scoped lang="scss">
