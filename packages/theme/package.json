@@ -1,0 +1,11 @@
+{
+  "name": "@vuesax-next-ru/theme",
+  "version": "1.0.0",
+  "description": "Vuesax-Next (Ru Edition) - Theme & Design Tokens",
+  "main": "index.scss",
+  "type": "module",
+  "files": [
+    "*.scss"
+  ],
+  "license": "MIT"
+}
