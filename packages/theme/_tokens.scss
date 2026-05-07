@@ -1,0 +1,97 @@
+/**
+ * Vuesax-Next (Ru Edition) - Design Tokens
+ * 
+ * 汝窑美学色彩系统
+ * 基于低饱和度、高质感的东方审美体系
+ * 
+ * 色彩寓意：
+ * - 天青 (#7BBFC3): 汝窑的标志性颜色，宁静致远
+ * - 粉青 (#90B44B): 自然生机，柔和温暖
+ * - 琥珀 (#E08A5E): 古韵厚重，岁月沉淀
+ * - 釉红 (#CF4647): 精致典雅，点缀生动
+ * - 月白 (#F5F7F8): 纯净高级，背景底色
+ */
+
+:root {
+  /* 主色系 - Ru Porcelain Primary Colors */
+  --vs-primary: #7BBFC3;           /* 天青 - Primary */
+  --vs-success: #90B44B;           /* 粉青 - Success */
+  --vs-warn: #E08A5E;              /* 琥珀 - Warning */
+  --vs-danger: #CF4647;            /* 釉红 - Danger */
+  --vs-bg: #F5F7F8;                /* 月白 - Background */
+
+  /* 扩展色系 - Extended Palette */
+  --vs-primary-light: #A8D4D9;     /* 天青浅色 */
+  --vs-primary-dark: #5A9FA5;      /* 天青深色 */
+  
+  --vs-success-light: #B3D97A;     /* 粉青浅色 */
+  --vs-success-dark: #6D8A2F;      /* 粉青深色 */
+  
+  --vs-warn-light: #E8A97A;        /* 琥珀浅色 */
+  --vs-warn-dark: #C26B3E;         /* 琥珀深色 */
+  
+  --vs-danger-light: #E07A7B;      /* 釉红浅色 */
+  --vs-danger-dark: #A83536;       /* 釉红深色 */
+
+  /* 中性色系 - Neutral Colors */
+  --vs-text-primary: #2C3E50;      /* 深灰 - 主文本 */
+  --vs-text-secondary: #7F8C8D;    /* 中灰 - 次文本 */
+  --vs-text-tertiary: #BDC3C7;     /* 浅灰 - 辅助文本 */
+  --vs-border: #E8EAED;            /* 边框色 */
+  --vs-divider: #F0F2F5;           /* 分割线 */
+  --vs-overlay: rgba(0, 0, 0, 0.5);/* 遮罩 */
+
+  /* 阴影系统 - Shadow System */
+  --vs-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --vs-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --vs-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --vs-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  --vs-shadow-hover: 0 15px 30px rgba(123, 191, 195, 0.15);
+
+  /* 圆角系统 - Border Radius */
+  --vs-radius-sm: 4px;
+  --vs-radius-md: 8px;
+  --vs-radius-lg: 12px;
+  --vs-radius-xl: 18px;
+  --vs-radius-2xl: 24px;
+
+  /* 间距系统 - Spacing */
+  --vs-spacing-xs: 4px;
+  --vs-spacing-sm: 8px;
+  --vs-spacing-md: 12px;
+  --vs-spacing-lg: 16px;
+  --vs-spacing-xl: 24px;
+  --vs-spacing-2xl: 32px;
+
+  /* 过渡系统 - Transitions */
+  --vs-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --vs-transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --vs-transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* 字体系统 - Typography */
+  --vs-font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --vs-font-size-xs: 12px;
+  --vs-font-size-sm: 14px;
+  --vs-font-size-base: 16px;
+  --vs-font-size-lg: 18px;
+  --vs-font-size-xl: 20px;
+  --vs-font-size-2xl: 24px;
+  --vs-font-weight-light: 300;
+  --vs-font-weight-normal: 400;
+  --vs-font-weight-medium: 500;
+  --vs-font-weight-semibold: 600;
+  --vs-font-weight-bold: 700;
+}
+
+/* 深色模式支持 - Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --vs-bg: #1A1F2E;
+    --vs-text-primary: #E8EAED;
+    --vs-text-secondary: #9CA3AF;
+    --vs-text-tertiary: #6B7280;
+    --vs-border: #374151;
+    --vs-divider: #2D3748;
+    --vs-overlay: rgba(0, 0, 0, 0.7);
+  }
+}

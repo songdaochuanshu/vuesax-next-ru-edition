@@ -1,0 +1,23 @@
+{
+  "name": "@vuesax-next-ru/components",
+  "version": "1.0.0",
+  "description": "Vuesax-Next (Ru Edition) - UI Components",
+  "main": "index.ts",
+  "type": "module",
+  "files": [
+    "**/*.vue",
+    "**/*.ts"
+  ],
+  "exports": {
+    ".": {
+      "import": "./index.ts"
+    },
+    "./card": {
+      "import": "./Card/index.ts"
+    }
+  },
+  "dependencies": {
+    "@vuesax-next-ru/theme": "workspace:*"
+  },
+  "license": "MIT"
+}

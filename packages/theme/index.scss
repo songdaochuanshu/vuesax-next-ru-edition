@@ -1,0 +1,80 @@
+/**
+ * Vuesax-Next (Ru Edition) Theme Entry Point
+ * 汝窑美学主题系统
+ */
+
+@import './_tokens.scss';
+
+/* 全局样式重置 - Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: var(--vs-font-family-base);
+  font-size: var(--vs-font-size-base);
+  color: var(--vs-text-primary);
+  background-color: var(--vs-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 基础元素样式 - Base Elements */
+a {
+  color: var(--vs-primary);
+  text-decoration: none;
+  transition: color var(--vs-transition-base);
+
+  &:hover {
+    color: var(--vs-primary-dark);
+  }
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all var(--vs-transition-base);
+}
+
+/* 磨砂玻璃效果 - Glassmorphism */
+.vs-glass {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  .vs-glass {
+    background-color: rgba(26, 31, 46, 0.8);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* 浮动效果 - Floating Effect */
+.vs-float {
+  animation: vs-float 3s ease-in-out infinite;
+}
+
+@keyframes vs-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 悬停提升效果 - Hover Lift */
+.vs-hover-lift {
+  transition: all var(--vs-transition-base);
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--vs-shadow-hover);
+  }
+}

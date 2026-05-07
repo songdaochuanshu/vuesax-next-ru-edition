@@ -1,0 +1,17 @@
+{
+  "name": "@vuesax-next-ru/card",
+  "version": "1.0.0",
+  "description": "Vuesax-Next (Ru Edition) - Card Component",
+  "main": "index.ts",
+  "type": "module",
+  "files": [
+    "*.vue",
+    "*.ts"
+  ],
+  "exports": {
+    ".": {
+      "import": "./index.ts"
+    }
+  },
+  "license": "MIT"
+}
