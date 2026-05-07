@@ -1,0 +1,19 @@
+# Cloudflare Pages Configuration for Vuesax-Next (Ru Edition)
+
+name = "vuesax-next-ru-edition"
+type = "javascript"
+
+[env.production]
+name = "vuesax-next-ru-edition"
+
+[build]
+command = "cd playground && pnpm install && pnpm build"
+cwd = "."
+watch_paths = ["packages/**", "playground/**"]
+
+[build.upload]
+format = "service-worker"
+
+[env.production.build]
+command = "cd playground && pnpm install && pnpm build"
+cwd = "."
