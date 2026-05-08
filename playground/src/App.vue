@@ -5,140 +5,202 @@
 
     <!-- 主容器 -->
     <main class="main-content">
-      <!-- Hero 部分 -->
+      <!-- Hero 部分 - 极简艺术风格 -->
       <section class="hero-section">
-        <div class="hero-background">
-          <img 
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663629083491/ARQQHpFqs3bq4XrBNNZKYj/hero-background-artistic-JzQ7s5sRb8wtPHABjAZdN5.webp" 
-            alt="Hero Background"
-            class="hero-image"
-          />
-        </div>
-        
-        <div class="hero-content">
-          <div class="hero-text">
-            <div class="hero-label">
-              <span class="label-icon">✦</span>
-              <span>Vuesax-Next (Ru Edition)</span>
+        <div class="hero-container">
+          <div class="hero-grid">
+            <!-- 左侧：大胆排版 -->
+            <div class="hero-left">
+              <div class="hero-label">
+                <span class="label-text">Vuesax-Next</span>
+                <span class="label-dot"></span>
+              </div>
+
+              <h1 class="hero-title">
+                <span class="title-word">Crafted</span>
+                <span class="title-word">for</span>
+                <span class="title-word">clarity</span>
+              </h1>
+
+              <div class="hero-divider"></div>
+
+              <p class="hero-subtitle">
+                A premium component library inspired by Ru porcelain aesthetics. 
+                <span class="highlight">Minimalist design</span> meets 
+                <span class="highlight">bold creativity</span>.
+              </p>
+
+              <div class="hero-actions">
+                <a href="/components" class="btn btn-bold">Explore</a>
+                <a href="/docs" class="btn btn-outline">Docs</a>
+              </div>
             </div>
-            
-            <h1 class="hero-title">
-              <span class="title-line">Crafted for clarity.</span>
-              <span class="title-line highlight">Inspired by timeless elegance.</span>
-            </h1>
-            
-            <p class="hero-description">
-              A premium component library that brings harmony, consistency, and beauty to every interface. 
-              Rooted in Ru porcelain aesthetics, designed for modern developers.
-            </p>
-            
-            <div class="hero-actions">
-              <a href="/components" class="btn btn-primary">
-                <span>Explore Components</span>
-                <span class="btn-arrow">→</span>
-              </a>
-              <a href="/docs" class="btn btn-secondary">
-                <span>Documentation</span>
-              </a>
+
+            <!-- 右侧：创意视觉元素 -->
+            <div class="hero-right">
+              <div class="hero-visual">
+                <div class="visual-circle circle-1"></div>
+                <div class="visual-circle circle-2"></div>
+                <div class="visual-text">12</div>
+                <div class="visual-label">Components</div>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- 装饰元素 -->
+        <div class="hero-decoration">
+          <div class="deco-line deco-1"></div>
+          <div class="deco-line deco-2"></div>
+        </div>
       </section>
 
-      <!-- 特性部分 -->
+      <!-- 特性部分 - 不对称布局 -->
       <section class="features-section">
-        <div class="section-header">
-          <h2>Why Vuesax-Next?</h2>
-          <p>Elegance meets functionality</p>
-        </div>
-
-        <div class="features-grid">
-          <div class="feature-card" v-for="(feature, idx) in features" :key="idx">
-            <div class="feature-icon">{{ feature.icon }}</div>
-            <h3>{{ feature.title }}</h3>
-            <p>{{ feature.description }}</p>
+        <div class="features-container">
+          <div class="section-header">
+            <h2>Why Choose</h2>
+            <h2 class="header-highlight">Vuesax-Next?</h2>
           </div>
-        </div>
-      </section>
 
-      <!-- 色彩系统部分 -->
-      <section class="colors-section">
-        <div class="section-header">
-          <h2>Ru Porcelain Color System</h2>
-          <p>Inspired by ancient ceramics, refined for modern design</p>
-        </div>
+          <div class="features-grid">
+            <!-- 特性 1 - 大 -->
+            <div class="feature-card feature-large">
+              <div class="feature-number">01</div>
+              <h3>Ru Porcelain<br/>Aesthetics</h3>
+              <p>Inspired by ancient ceramics with low-saturation, high-quality design.</p>
+            </div>
 
-        <div class="colors-showcase">
-          <div v-for="(color, idx) in ruColors" :key="idx" class="color-item">
-            <div class="color-swatch" :style="{ backgroundColor: color.hex }"></div>
-            <div class="color-info">
-              <h4>{{ color.name }}</h4>
-              <p class="color-meaning">{{ color.meaning }}</p>
-              <p class="color-hex">{{ color.hex }}</p>
+            <!-- 特性 2 -->
+            <div class="feature-card">
+              <div class="feature-number">02</div>
+              <h3>Modern Tech</h3>
+              <p>Vue 3.5, TypeScript, Vite</p>
+            </div>
+
+            <!-- 特性 3 -->
+            <div class="feature-card">
+              <div class="feature-number">03</div>
+              <h3>Developer<br/>Friendly</h3>
+              <p>Complete types & docs</p>
+            </div>
+
+            <!-- 特性 4 - 大 -->
+            <div class="feature-card feature-large feature-alt">
+              <div class="feature-number">04</div>
+              <h3>Fully<br/>Responsive</h3>
+              <p>Perfect adaptation across all devices and screen sizes.</p>
+            </div>
+
+            <!-- 特性 5 -->
+            <div class="feature-card">
+              <div class="feature-number">05</div>
+              <h3>Dark Mode</h3>
+              <p>System detection</p>
+            </div>
+
+            <!-- 特性 6 -->
+            <div class="feature-card">
+              <div class="feature-number">06</div>
+              <h3>Accessible</h3>
+              <p>WCAG AA compliant</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 组件预览部分 -->
-      <section class="components-preview-section">
-        <div class="section-header">
-          <h2>Component Library</h2>
-          <p>12 carefully crafted components</p>
-        </div>
-
-        <div class="components-preview-grid">
-          <div v-for="(comp, idx) in componentsPreview" :key="idx" class="component-preview-card">
-            <div class="component-icon">{{ comp.icon }}</div>
-            <h4>{{ comp.name }}</h4>
-            <p>{{ comp.description }}</p>
+      <!-- 色彩系统 - 创意排版 -->
+      <section class="colors-section">
+        <div class="colors-container">
+          <div class="colors-header">
+            <h2>Color<br/><span class="header-rotate">System</span></h2>
+            <p class="colors-description">
+              Five carefully crafted colors inspired by Ru porcelain ceramics
+            </p>
           </div>
-        </div>
 
-        <div class="preview-cta">
-          <a href="/components" class="btn btn-primary-outline">
-            View All Components →
-          </a>
+          <div class="colors-grid">
+            <div v-for="(color, idx) in ruColors" :key="idx" class="color-card" :style="{ '--delay': idx * 0.1 + 's' }">
+              <div class="color-swatch" :style="{ backgroundColor: color.hex }"></div>
+              <div class="color-details">
+                <h4>{{ color.name }}</h4>
+                <p class="color-meaning">{{ color.meaning }}</p>
+                <code class="color-code">{{ color.hex }}</code>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- CTA 部分 -->
+      <!-- 组件展示 - 网格打破 -->
+      <section class="components-section">
+        <div class="components-container">
+          <div class="components-header">
+            <h2>12 Components</h2>
+            <div class="header-underline"></div>
+          </div>
+
+          <div class="components-masonry">
+            <div v-for="(comp, idx) in componentsPreview" :key="idx" class="component-item" :class="`item-${(idx % 4) + 1}`">
+              <div class="component-icon">{{ comp.icon }}</div>
+              <h4>{{ comp.name }}</h4>
+              <p>{{ comp.description }}</p>
+            </div>
+          </div>
+
+          <div class="components-cta">
+            <a href="/components" class="btn btn-bold btn-large">
+              View All Components →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA 部分 - 大胆设计 -->
       <section class="cta-section">
-        <div class="cta-content">
-          <h2>Ready to elevate your UI?</h2>
-          <p>Start building beautiful interfaces with Vuesax-Next</p>
-          <a href="/components" class="btn btn-primary btn-large">
-            Get Started
-          </a>
+        <div class="cta-container">
+          <div class="cta-content">
+            <h2>Ready to elevate<br/><span class="cta-highlight">your UI?</span></h2>
+            <p>Start building beautiful interfaces with Vuesax-Next today</p>
+            <a href="/components" class="btn btn-cta">Get Started</a>
+          </div>
+          <div class="cta-decoration">
+            <div class="cta-shape shape-1"></div>
+            <div class="cta-shape shape-2"></div>
+          </div>
         </div>
       </section>
 
       <!-- 页脚 -->
       <footer class="app-footer">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h4>Vuesax-Next</h4>
-            <p>A premium UI component library inspired by Ru porcelain aesthetics.</p>
+        <div class="footer-container">
+          <div class="footer-main">
+            <div class="footer-brand">
+              <h4>Vuesax-Next</h4>
+              <p>Premium UI components inspired by Ru porcelain aesthetics</p>
+            </div>
+            <div class="footer-links">
+              <div class="footer-column">
+                <h5>Resources</h5>
+                <ul>
+                  <li><a href="/components">Components</a></li>
+                  <li><a href="/docs">Documentation</a></li>
+                  <li><a href="https://github.com/songdaochuanshu/vuesax-next-ru-edition" target="_blank">GitHub</a></li>
+                </ul>
+              </div>
+              <div class="footer-column">
+                <h5>Design</h5>
+                <ul>
+                  <li><a href="/docs#design">Design System</a></li>
+                  <li><a href="/docs#design">Color Palette</a></li>
+                  <li><a href="/docs#design">Typography</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="footer-section">
-            <h4>Resources</h4>
-            <ul>
-              <li><a href="/components">Components</a></li>
-              <li><a href="/docs">Documentation</a></li>
-              <li><a href="https://github.com/songdaochuanshu/vuesax-next-ru-edition" target="_blank">GitHub</a></li>
-            </ul>
+          <div class="footer-bottom">
+            <p>&copy; 2026 Vuesax-Next • Crafted with elegance</p>
           </div>
-          <div class="footer-section">
-            <h4>Design</h4>
-            <ul>
-              <li><a href="/docs#design">Design System</a></li>
-              <li><a href="/docs#design">Color Palette</a></li>
-              <li><a href="/docs#design">Typography</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; 2026 Vuesax-Next (Ru Edition) - Crafted with elegance</p>
         </div>
       </footer>
     </main>
@@ -150,83 +212,29 @@ import Sidebar from './components/Sidebar.vue';
 import { useTheme } from './composables/useTheme';
 
 const { initTheme } = useTheme();
-
 initTheme();
 
-const features = [
-  {
-    icon: '🎨',
-    title: 'Ru Porcelain Aesthetics',
-    description: 'Inspired by ancient ceramics with low-saturation, high-quality design system'
-  },
-  {
-    icon: '⚡',
-    title: 'Modern Technology',
-    description: 'Built with Vue 3.5, TypeScript, and Vite for optimal performance'
-  },
-  {
-    icon: '🎯',
-    title: 'Developer Friendly',
-    description: 'Complete type system, comprehensive documentation, and intuitive API'
-  },
-  {
-    icon: '📱',
-    title: 'Fully Responsive',
-    description: 'Perfect adaptation across all screen sizes and devices'
-  },
-  {
-    icon: '🌙',
-    title: 'Dark Mode Ready',
-    description: 'Seamless dark mode support with automatic system detection'
-  },
-  {
-    icon: '♿',
-    title: 'Accessible',
-    description: 'WCAG AA compliant with full keyboard navigation support'
-  }
-];
-
 const ruColors = [
-  {
-    name: 'Sky Blue',
-    meaning: '天青 - Serenity and tranquility',
-    hex: '#7BBFC3'
-  },
-  {
-    name: 'Powder Green',
-    meaning: '粉青 - Vitality and growth',
-    hex: '#90B44B'
-  },
-  {
-    name: 'Amber',
-    meaning: '琥珀 - Warmth and stability',
-    hex: '#E08A5E'
-  },
-  {
-    name: 'Glaze Red',
-    meaning: '釉红 - Energy and attention',
-    hex: '#CF4647'
-  },
-  {
-    name: 'Moon White',
-    meaning: '月白 - Purity and clarity',
-    hex: '#F5F7F8'
-  }
+  { name: 'Sky Blue', meaning: '天青', hex: '#7BBFC3' },
+  { name: 'Powder Green', meaning: '粉青', hex: '#90B44B' },
+  { name: 'Amber', meaning: '琥珀', hex: '#E08A5E' },
+  { name: 'Glaze Red', meaning: '釉红', hex: '#CF4647' },
+  { name: 'Moon White', meaning: '月白', hex: '#F5F7F8' }
 ];
 
 const componentsPreview = [
-  { icon: '🔘', name: 'VsButton', description: 'Multiple styles and states' },
-  { icon: '📝', name: 'VsInput', description: 'Rich input types' },
-  { icon: '📋', name: 'VsSelect', description: 'Single and multi-select' },
-  { icon: '☑️', name: 'VsCheckbox', description: 'Flexible selection' },
-  { icon: '⭕', name: 'VsRadio', description: 'Single choice' },
-  { icon: '🔘', name: 'VsSwitch', description: 'Toggle control' },
-  { icon: '⚠️', name: 'VsAlert', description: 'Status messaging' },
-  { icon: '🔔', name: 'VsNotification', description: 'Notifications' },
-  { icon: '📦', name: 'VsModal', description: 'Dialog boxes' },
-  { icon: '🎯', name: 'VsDrawer', description: 'Side panels' },
-  { icon: '◀▶', name: 'VsPagination', description: 'Page navigation' },
-  { icon: '🔗', name: 'VsBreadcrumb', description: 'Navigation path' }
+  { icon: '🔘', name: 'Button', description: 'Multiple styles' },
+  { icon: '📝', name: 'Input', description: 'Rich types' },
+  { icon: '📋', name: 'Select', description: 'Multi-select' },
+  { icon: '☑️', name: 'Checkbox', description: 'Flexible' },
+  { icon: '⭕', name: 'Radio', description: 'Single choice' },
+  { icon: '🔘', name: 'Switch', description: 'Toggle' },
+  { icon: '⚠️', name: 'Alert', description: 'Status' },
+  { icon: '🔔', name: 'Notification', description: 'Notify' },
+  { icon: '📦', name: 'Modal', description: 'Dialog' },
+  { icon: '🎯', name: 'Drawer', description: 'Panels' },
+  { icon: '◀▶', name: 'Pagination', description: 'Navigate' },
+  { icon: '🔗', name: 'Breadcrumb', description: 'Path' }
 ];
 </script>
 
@@ -236,7 +244,7 @@ const componentsPreview = [
 .app {
   display: flex;
   min-height: 100vh;
-  background: var(--vs-bg);
+  background: #FAFBFC;
 }
 
 .main-content {
@@ -249,141 +257,115 @@ const componentsPreview = [
   }
 }
 
-/* Hero 部分 */
+/* ============ Hero Section ============ */
 .hero-section {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 60px 40px;
+  background: white;
   overflow: hidden;
-  background: var(--vs-bg);
 
   @media (max-width: 768px) {
-    height: auto;
-    min-height: 100vh;
     padding: 40px 20px;
+    min-height: auto;
   }
 }
 
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: zoomIn 0.8s ease-out;
-}
-
-@keyframes zoomIn {
-  from {
-    transform: scale(1.05);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.hero-content {
-  position: relative;
-  z-index: 10;
+.hero-container {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   width: 100%;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
 
   @media (max-width: 768px) {
-    padding: 0 20px;
-    justify-content: center;
-    text-align: center;
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
 
-.hero-text {
-  max-width: 600px;
-  animation: slideUp 0.8s ease-out 0.2s both;
+.hero-left {
+  animation: slideInLeft 0.8s ease-out;
 }
 
-@keyframes slideUp {
+@keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateX(-40px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
 .hero-label {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
-  background: rgba(123, 191, 195, 0.1);
-  border-radius: 24px;
+  margin-bottom: 32px;
   font-size: 12px;
-  font-weight: 600;
-  color: var(--vs-primary);
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 24px;
-}
+  letter-spacing: 2px;
+  color: var(--vs-primary);
 
-.label-icon {
-  font-size: 14px;
+  .label-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--vs-primary);
+    border-radius: 50%;
+  }
 }
 
 .hero-title {
   margin: 0 0 24px 0;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #2C3E50;
-  letter-spacing: -1px;
-
-  @media (prefers-color-scheme: dark) {
-    color: #E8EAED;
-  }
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #1a1a1a;
+  letter-spacing: -2px;
 
   @media (max-width: 768px) {
-    font-size: 36px;
+    font-size: 48px;
+  }
+
+  .title-word {
+    display: block;
+    animation: slideInLeft 0.8s ease-out;
+    animation-fill-mode: both;
+
+    &:nth-child(1) { animation-delay: 0.1s; }
+    &:nth-child(2) { animation-delay: 0.2s; }
+    &:nth-child(3) { animation-delay: 0.3s; }
   }
 }
 
-.title-line {
-  display: block;
+.hero-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--vs-primary);
+  margin: 24px 0;
+  animation: slideInLeft 0.8s ease-out 0.4s both;
 }
 
-.title-line.highlight {
-  background: linear-gradient(135deg, #7BBFC3, #90B44B);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-description {
+.hero-subtitle {
   margin: 0 0 32px 0;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #7F8C8D;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666;
   max-width: 500px;
 
-  @media (max-width: 768px) {
-    font-size: 16px;
+  .highlight {
+    color: var(--vs-primary);
+    font-weight: 600;
   }
 }
 
@@ -391,26 +373,136 @@ const componentsPreview = [
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
+  animation: slideInLeft 0.8s ease-out 0.5s both;
+}
 
-  @media (max-width: 768px) {
-    justify-content: center;
+.hero-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
-/* 按钮样式 */
+.hero-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-circle {
+  position: absolute;
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+
+  &.circle-1 {
+    width: 200px;
+    height: 200px;
+    background: rgba(123, 191, 195, 0.1);
+    animation-delay: 0s;
+  }
+
+  &.circle-2 {
+    width: 120px;
+    height: 120px;
+    background: rgba(144, 180, 75, 0.15);
+    animation-delay: 1s;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.visual-text {
+  position: relative;
+  z-index: 10;
+  font-size: 64px;
+  font-weight: 900;
+  color: var(--vs-primary);
+  animation: scaleIn 0.8s ease-out 0.6s both;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.visual-label {
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #999;
+  animation: slideInLeft 0.8s ease-out 0.7s both;
+}
+
+.hero-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.deco-line {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, var(--vs-primary), transparent);
+
+  &.deco-1 {
+    width: 300px;
+    height: 2px;
+    top: 30%;
+    right: 10%;
+    animation: slideInRight 1s ease-out;
+  }
+
+  &.deco-2 {
+    width: 200px;
+    height: 1px;
+    bottom: 20%;
+    left: 10%;
+    animation: slideInLeft 1s ease-out;
+  }
+}
+
+/* ============ Buttons ============ */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   padding: 14px 32px;
-  border-radius: 8px;
+  border-radius: 0;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
   transition: all 300ms ease-out;
   cursor: pointer;
   border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   white-space: nowrap;
 
   &:hover {
@@ -422,35 +514,24 @@ const componentsPreview = [
   }
 }
 
-.btn-primary {
-  background: linear-gradient(135deg, #7BBFC3, #7BBFC3);
+.btn-bold {
+  background: #1a1a1a;
   color: white;
-  box-shadow: 0 8px 24px rgba(123, 191, 195, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    box-shadow: 0 12px 32px rgba(123, 191, 195, 0.4);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
   }
 }
 
-.btn-secondary {
+.btn-outline {
   background: transparent;
-  color: var(--vs-primary);
-  border: 2px solid var(--vs-primary);
+  color: #1a1a1a;
+  border: 2px solid #1a1a1a;
 
   &:hover {
-    background: rgba(123, 191, 195, 0.05);
-  }
-}
-
-.btn-primary-outline {
-  background: transparent;
-  color: var(--vs-primary);
-  border: 2px solid var(--vs-primary);
-  padding: 12px 28px;
-  font-size: 14px;
-
-  &:hover {
-    background: rgba(123, 191, 195, 0.05);
+    background: #1a1a1a;
+    color: white;
   }
 }
 
@@ -459,74 +540,77 @@ const componentsPreview = [
   font-size: 16px;
 }
 
-.btn-arrow {
-  transition: transform 300ms ease-out;
-}
+.btn-cta {
+  background: var(--vs-primary);
+  color: white;
+  box-shadow: 0 8px 24px rgba(123, 191, 195, 0.3);
 
-.btn:hover .btn-arrow {
-  transform: translateX(4px);
-}
-
-/* 特性部分 */
-.features-section {
-  padding: 80px 40px;
-  background: white;
-
-  @media (prefers-color-scheme: dark) {
-    background: #2D3748;
+  &:hover {
+    box-shadow: 0 12px 32px rgba(123, 191, 195, 0.4);
   }
+}
+
+/* ============ Features Section ============ */
+.features-section {
+  padding: 100px 40px;
+  background: #FAFBFC;
 
   @media (max-width: 768px) {
     padding: 60px 20px;
   }
 }
 
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .section-header {
-  text-align: center;
   margin-bottom: 60px;
 
   h2 {
-    margin: 0 0 12px 0;
-    font-size: 40px;
-    font-weight: 700;
-    color: #2C3E50;
-    letter-spacing: -0.5px;
-
-    @media (prefers-color-scheme: dark) {
-      color: #E8EAED;
-    }
+    margin: 0;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #1a1a1a;
+    letter-spacing: -1px;
 
     @media (max-width: 768px) {
-      font-size: 28px;
+      font-size: 32px;
     }
   }
 
-  p {
-    margin: 0;
-    font-size: 16px;
-    color: #7F8C8D;
+  .header-highlight {
+    background: linear-gradient(135deg, #7BBFC3, #90B44B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  grid-auto-flow: dense;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .feature-card {
-  padding: 32px 24px;
-  background: #F5F7F8;
-  border-radius: 12px;
-  text-align: center;
+  padding: 32px;
+  background: white;
+  border-radius: 0;
+  border: 1px solid #E8EAED;
   transition: all 300ms ease-out;
-  border: 1px solid transparent;
-
-  @media (prefers-color-scheme: dark) {
-    background: #374151;
-  }
+  animation: fadeInUp 0.6s ease-out;
 
   &:hover {
     transform: translateY(-8px);
@@ -534,262 +618,407 @@ const componentsPreview = [
     box-shadow: 0 12px 32px rgba(123, 191, 195, 0.15);
   }
 
-  .feature-icon {
-    font-size: 40px;
+  &.feature-large {
+    grid-column: span 2;
+    grid-row: span 2;
+    padding: 48px;
+
+    @media (max-width: 1024px) {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
+
+  &.feature-alt {
+    background: linear-gradient(135deg, rgba(123, 191, 195, 0.05), rgba(144, 180, 75, 0.05));
+  }
+
+  .feature-number {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--vs-primary);
     margin-bottom: 16px;
+    opacity: 0.3;
   }
 
   h3 {
     margin: 0 0 12px 0;
-    font-size: 18px;
-    font-weight: 600;
-    color: #2C3E50;
-
-    @media (prefers-color-scheme: dark) {
-      color: #E8EAED;
-    }
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.3;
   }
 
   p {
     margin: 0;
     font-size: 14px;
-    color: #7F8C8D;
+    color: #666;
     line-height: 1.6;
   }
 }
 
-/* 色彩系统部分 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============ Colors Section ============ */
 .colors-section {
-  padding: 80px 40px;
-  background: linear-gradient(135deg, rgba(123, 191, 195, 0.05) 0%, rgba(144, 180, 75, 0.05) 100%);
+  padding: 100px 40px;
+  background: white;
 
   @media (max-width: 768px) {
     padding: 60px 20px;
   }
 }
 
-.colors-showcase {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
+.colors-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.color-item {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  animation: fadeInUp 0.6s ease-out;
+.colors-header {
+  margin-bottom: 60px;
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-}
+  h2 {
+    margin: 0 0 16px 0;
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #1a1a1a;
+    letter-spacing: -1px;
 
-.color-swatch {
-  width: 100%;
-  height: 120px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  transition: all 300ms ease-out;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-  }
-}
-
-.color-info {
-  h4 {
-    margin: 0 0 4px 0;
-    font-size: 16px;
-    font-weight: 600;
-    color: #2C3E50;
-
-    @media (prefers-color-scheme: dark) {
-      color: #E8EAED;
+    @media (max-width: 768px) {
+      font-size: 36px;
     }
   }
 
-  .color-meaning {
-    margin: 0 0 4px 0;
-    font-size: 13px;
-    color: #7F8C8D;
-  }
-
-  .color-hex {
-    margin: 0;
-    font-size: 12px;
-    font-family: 'Menlo', 'Monaco', monospace;
+  .header-rotate {
+    display: inline-block;
+    transform: rotate(-3deg);
     color: var(--vs-primary);
-    font-weight: 600;
+  }
+
+  .colors-description {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+    max-width: 500px;
   }
 }
 
-/* 组件预览部分 */
-.components-preview-section {
-  padding: 80px 40px;
-  background: white;
+.colors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+}
 
-  @media (prefers-color-scheme: dark) {
-    background: #2D3748;
+.color-card {
+  animation: fadeInUp 0.6s ease-out;
+  animation-delay: var(--delay);
+
+  .color-swatch {
+    width: 100%;
+    height: 160px;
+    border-radius: 0;
+    margin-bottom: 16px;
+    transition: all 300ms ease-out;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
   }
+
+  .color-details {
+    h4 {
+      margin: 0 0 4px 0;
+      font-size: 16px;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .color-meaning {
+      margin: 0 0 8px 0;
+      font-size: 12px;
+      color: #999;
+    }
+
+    .color-code {
+      display: block;
+      font-size: 12px;
+      font-family: 'Menlo', monospace;
+      color: var(--vs-primary);
+      font-weight: 600;
+    }
+  }
+}
+
+/* ============ Components Section ============ */
+.components-section {
+  padding: 100px 40px;
+  background: #FAFBFC;
 
   @media (max-width: 768px) {
     padding: 60px 20px;
   }
 }
 
-.components-preview-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+.components-container {
   max-width: 1200px;
-  margin: 0 auto 40px;
+  margin: 0 auto;
 }
 
-.component-preview-card {
-  padding: 24px 16px;
-  background: #F5F7F8;
-  border-radius: 8px;
+.components-header {
+  margin-bottom: 60px;
+  position: relative;
+
+  h2 {
+    margin: 0;
+    font-size: 56px;
+    font-weight: 900;
+    color: #1a1a1a;
+    letter-spacing: -1px;
+
+    @media (max-width: 768px) {
+      font-size: 36px;
+    }
+  }
+
+  .header-underline {
+    width: 80px;
+    height: 6px;
+    background: var(--vs-primary);
+    margin-top: 12px;
+    animation: slideInLeft 0.8s ease-out;
+  }
+}
+
+.components-masonry {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.component-item {
+  padding: 24px;
+  background: white;
+  border-radius: 0;
+  border: 1px solid #E8EAED;
   text-align: center;
   transition: all 300ms ease-out;
-
-  @media (prefers-color-scheme: dark) {
-    background: #374151;
-  }
+  animation: fadeInUp 0.6s ease-out;
 
   &:hover {
     transform: translateY(-4px);
-    background: rgba(123, 191, 195, 0.1);
+    border-color: var(--vs-primary);
+    box-shadow: 0 8px 20px rgba(123, 191, 195, 0.15);
+  }
+
+  /* 网格打破效果 */
+  &.item-1 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  &.item-2 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  &.item-3 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  &.item-4 {
+    grid-column: span 1;
+    grid-row: span 1;
   }
 
   .component-icon {
-    font-size: 32px;
+    font-size: 40px;
     margin-bottom: 12px;
   }
 
   h4 {
     margin: 0 0 6px 0;
     font-size: 14px;
-    font-weight: 600;
-    color: #2C3E50;
-
-    @media (prefers-color-scheme: dark) {
-      color: #E8EAED;
-    }
+    font-weight: 700;
+    color: #1a1a1a;
   }
 
   p {
     margin: 0;
     font-size: 12px;
-    color: #7F8C8D;
+    color: #999;
   }
 }
 
-.preview-cta {
+.components-cta {
   text-align: center;
 }
 
-/* CTA 部分 */
+/* ============ CTA Section ============ */
 .cta-section {
   padding: 100px 40px;
-  background: linear-gradient(135deg, #7BBFC3 0%, #90B44B 100%);
-  text-align: center;
-  color: white;
+  background: white;
+  position: relative;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     padding: 60px 20px;
   }
 }
 
-.cta-content {
-  max-width: 600px;
+.cta-container {
+  max-width: 1200px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.cta-content {
   h2 {
     margin: 0 0 16px 0;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #1a1a1a;
+    letter-spacing: -1px;
 
     @media (max-width: 768px) {
-      font-size: 28px;
+      font-size: 32px;
     }
+  }
+
+  .cta-highlight {
+    color: var(--vs-primary);
   }
 
   p {
     margin: 0 0 32px 0;
-    font-size: 18px;
-    opacity: 0.95;
-
-    @media (max-width: 768px) {
-      font-size: 16px;
-    }
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
   }
 }
 
-.cta-section .btn-primary {
-  background: white;
-  color: #7BBFC3;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+.cta-decoration {
+  position: relative;
+  height: 300px;
+}
 
-  &:hover {
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+.cta-shape {
+  position: absolute;
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+
+  &.shape-1 {
+    width: 200px;
+    height: 200px;
+    background: rgba(123, 191, 195, 0.1);
+    top: 0;
+    right: 0;
+    animation-delay: 0s;
+  }
+
+  &.shape-2 {
+    width: 120px;
+    height: 120px;
+    background: rgba(144, 180, 75, 0.15);
+    bottom: 0;
+    left: 0;
+    animation-delay: 1s;
   }
 }
 
-/* 页脚 */
+/* ============ Footer ============ */
 .app-footer {
   padding: 60px 40px 20px;
-  background: white;
-  border-top: 1px solid #E8EAED;
-
-  @media (prefers-color-scheme: dark) {
-    background: #1F2937;
-    border-top-color: #374151;
-  }
+  background: #1a1a1a;
+  color: white;
 
   @media (max-width: 768px) {
     padding: 40px 20px 16px;
   }
 }
 
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 40px;
+.footer-container {
   max-width: 1200px;
-  margin: 0 auto 40px;
+  margin: 0 auto;
 }
 
-.footer-section {
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.footer-brand {
   h4 {
     margin: 0 0 12px 0;
-    font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #2C3E50;
-
-    @media (prefers-color-scheme: dark) {
-      color: #E8EAED;
-    }
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--vs-primary);
   }
 
   p {
     margin: 0;
-    font-size: 13px;
-    color: #7F8C8D;
+    font-size: 14px;
+    color: #999;
     line-height: 1.6;
+  }
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-column {
+  h5 {
+    margin: 0 0 12px 0;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
   }
 
   ul {
@@ -801,9 +1030,9 @@ const componentsPreview = [
       margin: 8px 0;
 
       a {
-        color: #7F8C8D;
+        color: #999;
         text-decoration: none;
-        font-size: 13px;
+        font-size: 14px;
         transition: color 300ms;
 
         &:hover {
@@ -815,26 +1044,14 @@ const componentsPreview = [
 }
 
 .footer-bottom {
-  text-align: center;
   padding-top: 20px;
-  border-top: 1px solid #E8EAED;
-
-  @media (prefers-color-scheme: dark) {
-    border-top-color: #374151;
-  }
+  border-top: 1px solid #333;
+  text-align: center;
 
   p {
     margin: 0;
     font-size: 12px;
-    color: #7F8C8D;
-  }
-}
-
-@media (max-width: 768px) {
-  .features-grid,
-  .colors-showcase,
-  .components-preview-grid {
-    gap: 16px;
+    color: #999;
   }
 }
 </style>
