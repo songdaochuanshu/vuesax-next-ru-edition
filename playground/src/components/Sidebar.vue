@@ -78,6 +78,7 @@ const toggleSidebar = () => {
   display: flex;
   flex-direction: column;
   transition: transform 300ms ease-out;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.05);
 
   @media (prefers-color-scheme: dark) {
     background: #2D3748;
@@ -158,8 +159,9 @@ const toggleSidebar = () => {
   color: #2C3E50;
   text-decoration: none;
   font-size: 14px;
-  transition: all 150ms;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  position: relative;
 
   @media (prefers-color-scheme: dark) {
     color: #E8EAED;
