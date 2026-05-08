@@ -28,10 +28,11 @@
 
       <div class="nav-section">
         <h3>资源</h3>
+        <a href="/components" class="nav-link" @click="toggleSidebar">🎨 组件演示</a>
+        <a href="/docs" class="nav-link" @click="toggleSidebar">📚 文档中心</a>
         <a href="https://github.com/songdaochuanshu/vuesax-next-ru-edition" target="_blank" class="nav-link">
           GitHub
         </a>
-        <a href="#" class="nav-link">文档</a>
       </div>
     </nav>
 
