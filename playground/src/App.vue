@@ -5,149 +5,229 @@
 
     <!-- 主容器 -->
     <main class="main-content">
-      <!-- 顶部导航栏 -->
-      <header class="app-header">
-        <div class="header-content">
-          <div class="header-left">
-            <h1>Vuesax-Next (Ru Edition)</h1>
-            <p>汝窑美学 UI 组件库 - 所见即所得的官方展示</p>
-          </div>
-          <div class="header-right">
-            <ThemeSwitcher />
-          </div>
+      <!-- Hero 部分 -->
+      <section class="hero-section">
+        <div class="hero-background">
+          <img 
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663629083491/ARQQHpFqs3bq4XrBNNZKYj/hero-background-artistic-JzQ7s5sRb8wtPHABjAZdN5.webp" 
+            alt="Hero Background"
+            class="hero-image"
+          />
         </div>
-      </header>
-
-      <!-- 概览部分 -->
-      <section id="overview" class="section overview-section">
-        <div class="section-content">
-          <h2>项目愿景</h2>
-          <p>
-            Vuesax-Next (Ru Edition) 是一个融入汝窑美学的现代 Vue 3.5+ UI 组件库。
-            我们将高饱和度的现代设计转化为低饱和度、高质感的东方审美体系，
-            为开发者提供优雅、高效的组件解决方案。
-          </p>
-          <div class="vision-grid">
-            <div class="vision-card">
-              <div class="vision-icon">🎨</div>
-              <h3>汝窑美学</h3>
-              <p>融入东方审美，低饱和度、高质感</p>
+        
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="hero-label">
+              <span class="label-icon">✦</span>
+              <span>Vuesax-Next (Ru Edition)</span>
             </div>
-            <div class="vision-card">
-              <div class="vision-icon">⚡</div>
-              <h3>现代技术</h3>
-              <p>Vue 3.5 + TypeScript + Vite</p>
-            </div>
-            <div class="vision-card">
-              <div class="vision-icon">🎯</div>
-              <h3>开发友好</h3>
-              <p>完整的类型系统和文档支持</p>
-            </div>
-            <div class="vision-card">
-              <div class="vision-icon">📱</div>
-              <h3>响应式设计</h3>
-              <p>完美适配各种屏幕尺寸</p>
+            
+            <h1 class="hero-title">
+              <span class="title-line">Crafted for clarity.</span>
+              <span class="title-line highlight">Inspired by timeless elegance.</span>
+            </h1>
+            
+            <p class="hero-description">
+              A premium component library that brings harmony, consistency, and beauty to every interface. 
+              Rooted in Ru porcelain aesthetics, designed for modern developers.
+            </p>
+            
+            <div class="hero-actions">
+              <a href="/components" class="btn btn-primary">
+                <span>Explore Components</span>
+                <span class="btn-arrow">→</span>
+              </a>
+              <a href="/docs" class="btn btn-secondary">
+                <span>Documentation</span>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 色彩实验室 -->
-      <section id="lab" class="section lab-section">
-        <div class="section-content">
-          <h2>色彩实验室</h2>
-          <p>实时调整主题色，预览组件效果</p>
-          <ColorPicker />
+      <!-- 特性部分 -->
+      <section class="features-section">
+        <div class="section-header">
+          <h2>Why Vuesax-Next?</h2>
+          <p>Elegance meets functionality</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card" v-for="(feature, idx) in features" :key="idx">
+            <div class="feature-icon">{{ feature.icon }}</div>
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.description }}</p>
+          </div>
         </div>
       </section>
 
-      <!-- 组件展示 -->
-      <section id="components" class="section components-section">
-        <div class="section-content">
-          <h2>组件列表</h2>
-          <p>VsCard 组件 - 汝窑美学卡片展示</p>
+      <!-- 色彩系统部分 -->
+      <section class="colors-section">
+        <div class="section-header">
+          <h2>Ru Porcelain Color System</h2>
+          <p>Inspired by ancient ceramics, refined for modern design</p>
+        </div>
 
-          <div class="components-grid">
-            <div
-              v-for="(card, idx) in cardExamples"
-              :key="idx"
-              class="component-item"
-              :id="`component-${idx}`"
-            >
-              <div class="component-preview">
-                <VsCard
-                  :type="card.type"
-                  :title="card.title"
-                  :description="card.description"
-                  :image="card.image"
-                  :like-count="card.likeCount"
-                  :comment-count="card.commentCount"
-                  @like="handleLike"
-                  @comment="handleComment"
-                />
-              </div>
-              <button class="view-code-btn" @click="showCodePreview(card)">
-                查看代码
-              </button>
+        <div class="colors-showcase">
+          <div v-for="(color, idx) in ruColors" :key="idx" class="color-item">
+            <div class="color-swatch" :style="{ backgroundColor: color.hex }"></div>
+            <div class="color-info">
+              <h4>{{ color.name }}</h4>
+              <p class="color-meaning">{{ color.meaning }}</p>
+              <p class="color-hex">{{ color.hex }}</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- 组件预览部分 -->
+      <section class="components-preview-section">
+        <div class="section-header">
+          <h2>Component Library</h2>
+          <p>12 carefully crafted components</p>
+        </div>
+
+        <div class="components-preview-grid">
+          <div v-for="(comp, idx) in componentsPreview" :key="idx" class="component-preview-card">
+            <div class="component-icon">{{ comp.icon }}</div>
+            <h4>{{ comp.name }}</h4>
+            <p>{{ comp.description }}</p>
+          </div>
+        </div>
+
+        <div class="preview-cta">
+          <a href="/components" class="btn btn-primary-outline">
+            View All Components →
+          </a>
+        </div>
+      </section>
+
+      <!-- CTA 部分 -->
+      <section class="cta-section">
+        <div class="cta-content">
+          <h2>Ready to elevate your UI?</h2>
+          <p>Start building beautiful interfaces with Vuesax-Next</p>
+          <a href="/components" class="btn btn-primary btn-large">
+            Get Started
+          </a>
         </div>
       </section>
 
       <!-- 页脚 -->
       <footer class="app-footer">
         <div class="footer-content">
-          <p>&copy; 2026 Vuesax-Next (Ru Edition) - 汝窑美学 UI 组件库</p>
-          <p>
-            <a href="https://github.com/songdaochuanshu/vuesax-next-ru-edition" target="_blank">
-              GitHub Repository
-            </a>
-          </p>
+          <div class="footer-section">
+            <h4>Vuesax-Next</h4>
+            <p>A premium UI component library inspired by Ru porcelain aesthetics.</p>
+          </div>
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="/components">Components</a></li>
+              <li><a href="/docs">Documentation</a></li>
+              <li><a href="https://github.com/songdaochuanshu/vuesax-next-ru-edition" target="_blank">GitHub</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Design</h4>
+            <ul>
+              <li><a href="/docs#design">Design System</a></li>
+              <li><a href="/docs#design">Color Palette</a></li>
+              <li><a href="/docs#design">Typography</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Vuesax-Next (Ru Edition) - Crafted with elegance</p>
         </div>
       </footer>
     </main>
-
-    <!-- 代码预览模态框 -->
-    <CodePreview
-      :is-open="codePreviewOpen"
-      :title="`VsCard Type ${selectedCard?.type}`"
-      :code="selectedCard?.code || ''"
-      @close="codePreviewOpen = false"
-    />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import { VsCard } from '@vuesax-next-ru/components';
 import Sidebar from './components/Sidebar.vue';
-import ThemeSwitcher from './components/ThemeSwitcher.vue';
-import ColorPicker from './components/ColorPicker.vue';
-import CodePreview from './components/CodePreview.vue';
 import { useTheme } from './composables/useTheme';
-import { cardExamples } from './data/cardExamples';
 
 const { initTheme } = useTheme();
 
-const codePreviewOpen = ref(false);
-const selectedCard = ref<(typeof cardExamples)[0] | null>(null);
+initTheme();
 
-onMounted(() => {
-  initTheme();
-});
+const features = [
+  {
+    icon: '🎨',
+    title: 'Ru Porcelain Aesthetics',
+    description: 'Inspired by ancient ceramics with low-saturation, high-quality design system'
+  },
+  {
+    icon: '⚡',
+    title: 'Modern Technology',
+    description: 'Built with Vue 3.5, TypeScript, and Vite for optimal performance'
+  },
+  {
+    icon: '🎯',
+    title: 'Developer Friendly',
+    description: 'Complete type system, comprehensive documentation, and intuitive API'
+  },
+  {
+    icon: '📱',
+    title: 'Fully Responsive',
+    description: 'Perfect adaptation across all screen sizes and devices'
+  },
+  {
+    icon: '🌙',
+    title: 'Dark Mode Ready',
+    description: 'Seamless dark mode support with automatic system detection'
+  },
+  {
+    icon: '♿',
+    title: 'Accessible',
+    description: 'WCAG AA compliant with full keyboard navigation support'
+  }
+];
 
-const handleLike = (liked: boolean) => {
-  console.log('Card liked:', liked);
-};
+const ruColors = [
+  {
+    name: 'Sky Blue',
+    meaning: '天青 - Serenity and tranquility',
+    hex: '#7BBFC3'
+  },
+  {
+    name: 'Powder Green',
+    meaning: '粉青 - Vitality and growth',
+    hex: '#90B44B'
+  },
+  {
+    name: 'Amber',
+    meaning: '琥珀 - Warmth and stability',
+    hex: '#E08A5E'
+  },
+  {
+    name: 'Glaze Red',
+    meaning: '釉红 - Energy and attention',
+    hex: '#CF4647'
+  },
+  {
+    name: 'Moon White',
+    meaning: '月白 - Purity and clarity',
+    hex: '#F5F7F8'
+  }
+];
 
-const handleComment = () => {
-  console.log('Comment button clicked');
-};
-
-const showCodePreview = (card: (typeof cardExamples)[0]) => {
-  selectedCard.value = card;
-  codePreviewOpen.value = true;
-};
+const componentsPreview = [
+  { icon: '🔘', name: 'VsButton', description: 'Multiple styles and states' },
+  { icon: '📝', name: 'VsInput', description: 'Rich input types' },
+  { icon: '📋', name: 'VsSelect', description: 'Single and multi-select' },
+  { icon: '☑️', name: 'VsCheckbox', description: 'Flexible selection' },
+  { icon: '⭕', name: 'VsRadio', description: 'Single choice' },
+  { icon: '🔘', name: 'VsSwitch', description: 'Toggle control' },
+  { icon: '⚠️', name: 'VsAlert', description: 'Status messaging' },
+  { icon: '🔔', name: 'VsNotification', description: 'Notifications' },
+  { icon: '📦', name: 'VsModal', description: 'Dialog boxes' },
+  { icon: '🎯', name: 'VsDrawer', description: 'Side panels' },
+  { icon: '◀▶', name: 'VsPagination', description: 'Page navigation' },
+  { icon: '🔗', name: 'VsBreadcrumb', description: 'Navigation path' }
+];
 </script>
 
 <style scoped lang="scss">
@@ -169,116 +249,419 @@ const showCodePreview = (card: (typeof cardExamples)[0]) => {
   }
 }
 
-/* 顶部导航栏 */
-.app-header {
-  position: sticky;
+/* Hero 部分 */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--vs-bg);
+
+  @media (max-width: 768px) {
+    height: auto;
+    min-height: 100vh;
+    padding: 40px 20px;
+  }
+}
+
+.hero-background {
+  position: absolute;
   top: 0;
-  z-index: 50;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomIn 0.8s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.hero-text {
+  max-width: 600px;
+  animation: slideUp 0.8s ease-out 0.2s both;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(123, 191, 195, 0.1);
+  border-radius: 24px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--vs-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+
+.label-icon {
+  font-size: 14px;
+}
+
+.hero-title {
+  margin: 0 0 24px 0;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #2C3E50;
+  letter-spacing: -1px;
+
+  @media (prefers-color-scheme: dark) {
+    color: #E8EAED;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
+}
+
+.title-line {
+  display: block;
+}
+
+.title-line.highlight {
+  background: linear-gradient(135deg, #7BBFC3, #90B44B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  margin: 0 0 32px 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #7F8C8D;
+  max-width: 500px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}
+
+/* 按钮样式 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 300ms ease-out;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7BBFC3, #7BBFC3);
+  color: white;
+  box-shadow: 0 8px 24px rgba(123, 191, 195, 0.3);
+
+  &:hover {
+    box-shadow: 0 12px 32px rgba(123, 191, 195, 0.4);
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--vs-primary);
+  border: 2px solid var(--vs-primary);
+
+  &:hover {
+    background: rgba(123, 191, 195, 0.05);
+  }
+}
+
+.btn-primary-outline {
+  background: transparent;
+  color: var(--vs-primary);
+  border: 2px solid var(--vs-primary);
+  padding: 12px 28px;
+  font-size: 14px;
+
+  &:hover {
+    background: rgba(123, 191, 195, 0.05);
+  }
+}
+
+.btn-large {
+  padding: 16px 48px;
+  font-size: 16px;
+}
+
+.btn-arrow {
+  transition: transform 300ms ease-out;
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* 特性部分 */
+.features-section {
+  padding: 80px 40px;
   background: white;
-  border-bottom: 1px solid #E8EAED;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.95);
 
   @media (prefers-color-scheme: dark) {
     background: #2D3748;
-    border-bottom-color: #374151;
-    background-color: rgba(45, 55, 72, 0.95);
   }
-}
-
-.header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 60px 20px;
   }
 }
 
-.header-left h1 {
-  margin: 0 0 4px 0;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--vs-primary);
-  letter-spacing: -0.5px;
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+
+  h2 {
+    margin: 0 0 12px 0;
+    font-size: 40px;
+    font-weight: 700;
+    color: #2C3E50;
+    letter-spacing: -0.5px;
+
+    @media (prefers-color-scheme: dark) {
+      color: #E8EAED;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    color: #7F8C8D;
+  }
 }
 
-.header-left p {
-  margin: 0;
-  font-size: 14px;
-  color: #7F8C8D;
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-/* 区域样式 */
-.section {
-  padding: 60px 20px;
-  border-bottom: 1px solid #E8EAED;
+.feature-card {
+  padding: 32px 24px;
+  background: #F5F7F8;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 300ms ease-out;
+  border: 1px solid transparent;
 
   @media (prefers-color-scheme: dark) {
-    border-bottom-color: #374151;
+    background: #374151;
   }
 
-  @media (max-width: 768px) {
-    padding: 40px 16px;
+  &:hover {
+    transform: translateY(-8px);
+    border-color: var(--vs-primary);
+    box-shadow: 0 12px 32px rgba(123, 191, 195, 0.15);
+  }
+
+  .feature-icon {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2C3E50;
+
+    @media (prefers-color-scheme: dark) {
+      color: #E8EAED;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: #7F8C8D;
+    line-height: 1.6;
   }
 }
 
-.section-content {
+/* 色彩系统部分 */
+.colors-section {
+  padding: 80px 40px;
+  background: linear-gradient(135deg, rgba(123, 191, 195, 0.05) 0%, rgba(144, 180, 75, 0.05) 100%);
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
+}
+
+.colors-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.section h2 {
-  margin: 0 0 12px 0;
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--vs-primary);
-  letter-spacing: -0.5px;
+.color-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeInUp 0.6s ease-out;
 
-  @media (max-width: 768px) {
-    font-size: 24px;
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
-.section > .section-content > p {
-  margin: 0 0 30px 0;
-  font-size: 16px;
-  color: #7F8C8D;
-  line-height: 1.6;
+.color-swatch {
+  width: 100%;
+  height: 120px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: all 300ms ease-out;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  }
 }
 
-/* 概览部分 */
-.overview-section {
-  background: linear-gradient(135deg, rgba(123, 191, 195, 0.05) 0%, rgba(144, 180, 75, 0.05) 100%);
+.color-info {
+  h4 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2C3E50;
+
+    @media (prefers-color-scheme: dark) {
+      color: #E8EAED;
+    }
+  }
+
+  .color-meaning {
+    margin: 0 0 4px 0;
+    font-size: 13px;
+    color: #7F8C8D;
+  }
+
+  .color-hex {
+    margin: 0;
+    font-size: 12px;
+    font-family: 'Menlo', 'Monaco', monospace;
+    color: var(--vs-primary);
+    font-weight: 600;
+  }
 }
 
-.vision-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
-}
-
-.vision-card {
-  padding: 24px;
+/* 组件预览部分 */
+.components-preview-section {
+  padding: 80px 40px;
   background: white;
-  border-radius: var(--vs-radius-lg);
+
+  @media (prefers-color-scheme: dark) {
+    background: #2D3748;
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
+}
+
+.components-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.component-preview-card {
+  padding: 24px 16px;
+  background: #F5F7F8;
+  border-radius: 8px;
   text-align: center;
-  transition: all var(--vs-transition-base);
-  box-shadow: var(--vs-shadow-sm);
+  transition: all 300ms ease-out;
 
   @media (prefers-color-scheme: dark) {
     background: #374151;
@@ -286,132 +669,172 @@ const showCodePreview = (card: (typeof cardExamples)[0]) => {
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: var(--vs-shadow-md);
+    background: rgba(123, 191, 195, 0.1);
+  }
+
+  .component-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  h4 {
+    margin: 0 0 6px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2C3E50;
+
+    @media (prefers-color-scheme: dark) {
+      color: #E8EAED;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 12px;
+    color: #7F8C8D;
   }
 }
 
-.vision-icon {
-  font-size: 40px;
-  margin-bottom: 12px;
+.preview-cta {
+  text-align: center;
 }
 
-.vision-card h3 {
-  margin: 0 0 8px 0;
-  font-size: 18px;
-  font-weight: 600;
-  color: #2C3E50;
+/* CTA 部分 */
+.cta-section {
+  padding: 100px 40px;
+  background: linear-gradient(135deg, #7BBFC3 0%, #90B44B 100%);
+  text-align: center;
+  color: white;
 
-  @media (prefers-color-scheme: dark) {
-    color: #E8EAED;
+  @media (max-width: 768px) {
+    padding: 60px 20px;
   }
 }
 
-.vision-card p {
-  margin: 0;
-  font-size: 14px;
-  color: #7F8C8D;
-  line-height: 1.5;
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+
+  h2 {
+    margin: 0 0 16px 0;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+    }
+  }
+
+  p {
+    margin: 0 0 32px 0;
+    font-size: 18px;
+    opacity: 0.95;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
 }
 
-/* 色彩实验室 */
-.lab-section {
-  background: linear-gradient(135deg, rgba(144, 180, 75, 0.05) 0%, rgba(224, 138, 94, 0.05) 100%);
-}
-
-/* 组件展示 */
-.components-section {
-  background: linear-gradient(135deg, rgba(224, 138, 94, 0.05) 0%, rgba(207, 70, 71, 0.05) 100%);
-}
-
-.components-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 32px;
-  margin-top: 30px;
-}
-
-.component-item {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.component-preview {
-  flex: 1;
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.cta-section .btn-primary {
   background: white;
-  border-radius: var(--vs-radius-lg);
-  padding: 20px;
-  box-shadow: var(--vs-shadow-md);
-
-  @media (prefers-color-scheme: dark) {
-    background: #374151;
-  }
-}
-
-.view-code-btn {
-  padding: 12px 20px;
-  border-radius: var(--vs-radius-md);
-  border: 2px solid var(--vs-primary);
-  background: transparent;
-  color: var(--vs-primary);
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all var(--vs-transition-base);
+  color: #7BBFC3;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    background: var(--vs-primary);
-    color: white;
-    box-shadow: 0 4px 12px rgba(123, 191, 195, 0.3);
-  }
-
-  &:active {
-    transform: scale(0.95);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
   }
 }
 
 /* 页脚 */
 .app-footer {
-  padding: 40px 20px;
+  padding: 60px 40px 20px;
   background: white;
   border-top: 1px solid #E8EAED;
-  text-align: center;
 
   @media (prefers-color-scheme: dark) {
-    background: #2D3748;
+    background: #1F2937;
     border-top-color: #374151;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 20px 16px;
   }
 }
 
-.footer-content p {
-  margin: 8px 0;
-  font-size: 14px;
-  color: #7F8C8D;
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
 
-  a {
-    color: var(--vs-primary);
-    text-decoration: none;
-    transition: color var(--vs-transition-base);
+.footer-section {
+  h4 {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #2C3E50;
 
-    &:hover {
-      color: var(--vs-primary-dark);
-      text-decoration: underline;
+    @media (prefers-color-scheme: dark) {
+      color: #E8EAED;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 13px;
+    color: #7F8C8D;
+    line-height: 1.6;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 8px 0;
+
+      a {
+        color: #7F8C8D;
+        text-decoration: none;
+        font-size: 13px;
+        transition: color 300ms;
+
+        &:hover {
+          color: var(--vs-primary);
+        }
+      }
     }
   }
 }
 
-@media (max-width: 768px) {
-  .components-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #E8EAED;
+
+  @media (prefers-color-scheme: dark) {
+    border-top-color: #374151;
   }
 
-  .component-preview {
-    min-height: 350px;
+  p {
+    margin: 0;
+    font-size: 12px;
+    color: #7F8C8D;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-grid,
+  .colors-showcase,
+  .components-preview-grid {
+    gap: 16px;
   }
 }
 </style>
