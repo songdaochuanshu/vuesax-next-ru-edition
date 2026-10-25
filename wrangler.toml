@@ -1,19 +1,6 @@
-# Cloudflare Pages Configuration for Vuesax-Next (Ru Edition)
-
+# Cloudflare Pages 配置
+# 注意：Pages 不认 [build] / [build.upload] / [env.production.build] 这些块，
+# 构建命令与输出目录必须在 Pages 控制台（或 CI）里配置，这里只声明 Pages 项目名与产物目录。
 name = "vuesax-next-ru-edition"
-type = "javascript"
-
-[env.production]
-name = "vuesax-next-ru-edition"
-
-[build]
-command = "cd playground && pnpm install && pnpm build"
-cwd = "."
-watch_paths = ["packages/**", "playground/**"]
-
-[build.upload]
-format = "service-worker"
-
-[env.production.build]
-command = "cd playground && pnpm install && pnpm build"
-cwd = "."
+compatibility_date = "2026-10-01"
+pages_build_output_dir = "dist/public"
